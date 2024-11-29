@@ -25,9 +25,7 @@ const App = () => {
     stackDetails: {
       apiKey: "blt0d2b243e97429908",
       environment: "dev",
-    },
-    mode: "builder",
-    // other options
+    }
   });
 
   return (
