@@ -11,22 +11,11 @@ import ContentstackLivePreview from "@contentstack/live-preview-utils"
 const App = () => {
 
   const Stack = Contentstack.Stack({
-    api_key: 'blt0d2b243e97429908',
-    delivery_token: 'cs63841f49ed37cd983d299b04',
+    api_key: stack-api-key,
+    delivery_token: your-delivery-token,
     environment: 'dev',
-    region: Contentstack.Region.EU,
-    live_preview: {
-      enable: true,
-      preview_token: "cs145d5252d5fc02b88d2dca1e"
-    }
+    region: Contentstack.Region.EU, // select the region your stack exists on
   })
-
-  ContentstackLivePreview.init({
-    stackDetails: {
-      apiKey: "blt0d2b243e97429908",
-      environment: "dev",
-    }
-  });
 
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
