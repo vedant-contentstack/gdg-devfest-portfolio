@@ -5,16 +5,6 @@ import Personalize from '@contentstack/personalize-edge-sdk'
 const Projects = ({ stack }) => {
   const [projects, setProjects] = useState([])
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const projectUid = '6749fba32f955ae937fb8d34'
-  //     Personalize.setEdgeApiUrl('https://eu-personalize-edge.contentstack.com')
-  //     await Personalize.init(projectUid)
-  //     const activeVariant = Personalize.getVariantAliases()
-  //     console.log(activeVariant)
-  //   })()
-  // }, [])
-
   useEffect(() => {
     (() => {
       stack
@@ -24,18 +14,6 @@ const Projects = ({ stack }) => {
         .toJSON()
         .find()
         .then((result) => {
-          // const entries = result[0]
-          // console.log
-          // entries.forEach((entry) => {
-          //   stack
-          //     .ContentType('project')
-          //     .Entry(entry.uid)
-          //     .variants('6749fc12bc3d6fbd345856b8/0')
-          //     .toJSON()
-          //     .fetch().then((res)=>{
-          //       console.log("var", res)
-          //     })
-          // })
           setProjects(result[0])
         })
     })()
